@@ -600,3 +600,5 @@ shebang.txt
 # Project Specific ignores
 standard_items/
 
+.env
+_project_meta.env
