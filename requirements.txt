@@ -1,0 +1,35 @@
+altgraph==0.17
+atomicwrites==1.4.0
+attrs==20.2.0
+beautifulsoup4==4.9.1
+bs4==0.0.1
+click==7.1.2
+colorama==0.4.3
+future==0.18.2
+-e git+https://github.com/Giddius/gidlogger_rep.git@63addb4423d7958b5b46a41506a9bea72864fe09#egg=gidlogger
+-e git+https://github.com/Giddius/gidqtutils.git@a8c5702b56147d316125ff022744b6bc0b727b89#egg=gidqtutils
+-e git+https://github.com/Giddius/gidtools_utils.git@8e07d56007f984bd69cb4d8b00ecc0cc24db894c#egg=gidtools
+-e git+https://github.com/Giddius/Gid_Qt_View_models.git@73caf4e693798e5c818772b499756fd8e7a774e8#egg=gidviewmodels
+iniconfig==1.0.1
+Jinja2==2.11.2
+MarkupSafe==1.1.1
+more-itertools==8.5.0
+packaging==20.4
+pefile==2019.4.18
+pluggy==0.13.1
+py==1.9.0
+pyinstaller @ https://github.com/pyinstaller/pyinstaller/tarball/develop
+pyinstaller-hooks-contrib==2020.8
+pyparsing==2.4.7
+pyperclip==1.8.0
+PyQt5==5.15.1
+PyQt5-sip==12.8.1
+PyQt5-stubs==5.14.2.2
+pyqt5-tools==5.15.0.1.7.1
+pytest==6.0.2
+python-dotenv==0.14.0
+pywin32-ctypes==0.2.0
+QScintilla==2.11.5
+six==1.15.0
+soupsieve==2.0.1
+toml==0.10.1

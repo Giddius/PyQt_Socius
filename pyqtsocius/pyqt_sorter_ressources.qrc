@@ -1,0 +1,53 @@
+<RCC>
+  <qresource prefix="icons">
+    <file alias="snippet_4">ressources/icons/tasks.png</file>
+    <file alias="tree_view">ressources/icons/tree.png</file>
+    <file alias="snippet_13">ressources/icons/geschaeft.png</file>
+    <file alias="snippet_17">ressources/icons/einsatz.png</file>
+    <file alias="snippet1">ressources/icons/magic.png</file>
+    <file alias="snippet_14">ressources/icons/erweiterung.png</file>
+    <file alias="snippet_16">ressources/icons/roboter.png</file>
+    <file alias="snippet_15">ressources/icons/internet(1).png</file>
+    <file alias="snippet_10">ressources/icons/aufmerksam.png</file>
+    <file alias="snippet_12">ressources/icons/geschaeft.png</file>
+    <file alias="snippet_11">ressources/icons/anwendung.png</file>
+    <file alias="snippet_6">ressources/icons/productivity.png</file>
+    <file alias="snippet_9">ressources/icons/benachrichtigung.png</file>
+    <file alias="snippet_7">ressources/icons/istockphoto-999192704-170667a.jpg</file>
+    <file alias="snippet_8">ressources/icons/codierung.png</file>
+    <file alias="snippet_5">ressources/icons/modification.png</file>
+    <file alias="dnd_line_edit_icon">ressources/icons/slider.png</file>
+    <file alias="snippet2">ressources/icons/website-design.png</file>
+    <file alias="toolbox_icon">ressources/icons/toolbox.png</file>
+    <file alias="snippet3">ressources/icons/laptop.png</file>
+    <file alias="tableview_icon">ressources/icons/data-table.png</file>
+    <file alias="spinbox_icon">ressources/icons/slot-machine.png</file>
+    <file alias="check">ressources/icons/check.png</file>
+    <file alias="icons8-qt-500">ressources/icons/icons8-qt-500.png</file>
+    <file alias="action">ressources/icons/action.png</file>
+    <file alias="action-figure">ressources/icons/action-figure.png</file>
+    <file alias="Box">ressources/icons/Box.png</file>
+    <file alias="check">ressources/icons/check.png</file>
+    <file alias="checklist">ressources/icons/checklist.png</file>
+    <file alias="drop-down-list">ressources/icons/drop-down-list.png</file>
+    <file alias="frame">ressources/icons/frame.png</file>
+    <file alias="grid">ressources/icons/grid.png</file>
+    <file alias="minus">ressources/icons/minus.png</file>
+    <file alias="numbers">ressources/icons/numbers.png</file>
+    <file alias="open-menu">ressources/icons/open-menu.png</file>
+    <file alias="order">ressources/icons/order.png</file>
+    <file alias="pin-push">ressources/icons/pin-push.png</file>
+    <file alias="placeholder_icon">ressources/icons/placeholder_icon.ico</file>
+    <file alias="rectangle">ressources/icons/rectangle.png</file>
+    <file alias="Status">ressources/icons/Status.png</file>
+    <file alias="tab">ressources/icons/tab.png</file>
+    <file alias="tag">ressources/icons/tag.png</file>
+    <file alias="text">ressources/icons/text.png</file>
+    <file alias="UI_Inspector">ressources/icons/UI_Inspector.png</file>
+    <file alias="window">ressources/icons/window.png</file>
+    <file alias="gid_logo">ressources/icons/new_gid_logo_small.png</file>
+  </qresource>
+  <qresource prefix="backgrounds">
+    <file alias="snippets_background">ressources/backgrounds/mytry2.png</file>
+  </qresource>
+</RCC>
