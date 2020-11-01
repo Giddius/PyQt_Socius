@@ -76,6 +76,7 @@ def convert_and_replace_to_toml(in_list):
     _requires_part = REQUIRES_REGEX.search(toml_content).group(1)
     _new_requires = "requires = [\n"
     for line in in_list:
+        line = line.split('==')[0]
         line = f'\t"{line}",\n'
         _new_requires += line
     _new_requires += ']\n'

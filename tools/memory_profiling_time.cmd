@@ -5,7 +5,7 @@ set OLDHOME_FOLDER=%~dp0
 
 pushd %OLDHOME_FOLDER%
 
-call .\activate_with_vars.bat
+call ..\.venv\Scripts\activate.bat
 
 rem ---------------------------------------------------
 set _date=%DATE:/=-%
@@ -33,16 +33,16 @@ set INFILEBASE=%~n1
 
 pushd %INPATH%
 
-mkdir %WORKSPACEDIR_BATCH%\misc\memory_profiling
-
+mkdir %WORKSPACEDIR%\misc\memory_profiling
+echo %WORKSPACEDIR%\misc\memory_profiling
 rem call pip install -q memory-profiler
 rem call pip install -q matplotlib
 
-mprof.exe clean
-mprof.exe run --include-children %~1
-mprof.exe plot --flame
-mprof.exe plot -o %WORKSPACEDIR_BATCH%\misc\memory_profiling\[%_years%-%_months%-%_days%_%_hours%-%_minutes%-%_seconds%]_mem_%INFILEBASE%.svg
-mprof.exe clean
+mprof clean
+mprof run --include-children %~1
+mprof plot --flame
+mprof plot -o %WORKSPACEDIR%\misc\memory_profiling\[%_years%-%_months%-%_days%_%_hours%-%_minutes%-%_seconds%]_mem_%INFILEBASE%.svg
+mprof clean
 
 rem call pip uninstall -q -y memory-profiler
 rem call pip uninstall -q -y psutil
@@ -56,4 +56,3 @@ rem call pip uninstall -q -y pyparsing
 rem call pip uninstall -q -y python-dateutil
 rem call pip uninstall -q -y six
 
-call pssuspend64 Dropbox -r

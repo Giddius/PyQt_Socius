@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SnippetsTab</class>
+ <widget class="QWidget" name="SnippetsTab">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1363</width>
+    <height>1102</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="2" column="0">
+    <widget class="QPushButton" name="change_font_pushButton">
+     <property name="text">
+      <string>change Font</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="3">
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="childrenCollapsible">
+      <bool>false</bool>
+     </property>
+     <widget class="SnippetsTableView" name="snippets_tableView">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>350</height>
+       </size>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::EditKeyPressed</set>
+      </property>
+     </widget>
+     <widget class="QsciScintilla" name="snippet_preview_Scintilla">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>1162</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="2">
+    <widget class="QPushButton" name="new_snippet_pushButton">
+     <property name="text">
+      <string>Add New Snippet</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QPushButton" name="delete_snippet_pushButton">
+     <property name="text">
+      <string>Delete Snippet</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SnippetsTableView</class>
+   <extends>QTableView</extends>
+   <header>pyqtsocius.ui_elements.views.snippets_tableview</header>
+  </customwidget>
+  <customwidget>
+   <class>QsciScintilla</class>
+   <extends>QPlainTextEdit</extends>
+   <header>PyQt5.Qsci</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../pyqtsocius/ui_elements/pyqt_sorter_ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

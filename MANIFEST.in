@@ -1,0 +1,9 @@
+graft pyqtsocius
+prune dev_ressources
+prune logs
+prune ui_ressources
+exclude .env
+exclude _dev_env.trigger
+prune /icons
+exclude *.qrc
+exclude ui_conv_targets.json

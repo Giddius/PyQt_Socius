@@ -26,7 +26,7 @@ from pyqt_sorter_dialogs import WidgetInfoDialog, BoilerCreationDialog, SnippetA
 
 # endregion [Imports]
 
-__updated__ = '2020-09-22 02:24:31'
+__updated__ = '2020-10-29 18:30:19'
 
 # region [Configs]
 
@@ -57,26 +57,6 @@ if USER_CONFIG.getboolean('general_settings', 'use_logging') is False:
 
 
 # endregion [Global_Functions]
-
-class SystemTray(QSystemTrayIcon):
-    def __init__(self, window, in_app, *args, **kwargs):
-        super().__init__(icon=make_icons(':/icons/gid_logo', 40, 40), * args, **kwargs)
-        self.window = window
-        self.app = in_app
-        self.setup_menu()
-
-    def setup_menu(self):
-        self.systray_menu = QMenu(self.window)
-        show_action = QAction("Show", self.systray_menu)
-        show_action.triggered.connect(self.window.show)
-        hide_action = QAction("Hide", self.systray_menu)
-        hide_action.triggered.connect(self.window.hide)
-        quit_action = QAction('Close', self.systray_menu)
-        quit_action.triggered.connect(self.app.quit)
-        self.systray_menu.addAction(show_action)
-        self.systray_menu.addAction(hide_action)
-        self.systray_menu.addAction(quit_action)
-        self.setContextMenu(self.systray_menu)
 
 
 # region [Main_Window_Widget]

@@ -597,8 +597,18 @@ logs/
 profile_config.ini
 icons/
 shebang.txt
+*_config.ini
+user_icons/
+to_trash/
+*.env
+data_pack/
+.env
 # Project Specific ignores
 standard_items/
-
-.env
+dev_env.trigger
+*.png
+*.jpg
 _project_meta.env
+/temp/PyQtChart-5.15.2.dev2009171536/examples/barchart.py
+*mem*.svg
+private_quick_scripts/

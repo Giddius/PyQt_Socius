@@ -1,18 +1,6 @@
-from dotenv import load_dotenv
-import os
-from gidtools.gidfiles import writeit, pathmaker
+from glob import iglob
 
-load_dotenv()
-
-
-WORKSPACEDIR = os.getenv('WORKSPACEDIR')
-
-
-def produce_inits():
-    for dirname, folderlist, filelist in os.walk(pathmaker(WORKSPACEDIR, 'Antipetros_Discord_Bot')):
-        if '__init__.py' not in filelist:
-            writeit(pathmaker(dirname, '__init__.py'), '')
-
-
-if __name__ == '__main__':
-    produce_inits()
+MAINDIR = r"D:/Dropbox/hobby/Modding/Programs/Github/My_Repos/PyQt_Socius"
+_conv_name = "pyqt_sorter_models.py"
+for x in iglob(f"{MAINDIR}/**/{_conv_name}"):
+    print(x)

@@ -1,0 +1,9 @@
+requests==2.24.0
+beautifulsoup4==4.9.3
+fuzzywuzzy==0.18.0
+gidlogger==0.1.1
+Jinja2==2.11.2
+natsort==7.0.1
+pyperclip==1.8.1
+PyQt5==5.15.1
+python-dotenv==0.15.0

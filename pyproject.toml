@@ -3,41 +3,42 @@ requires = ["flit_core >=2,<4"]
 build-backend = "flit_core.buildapi"
 
 [tool.flit.metadata]
-module = "toolvault"
+module = "pyqtsocius"
 author = "Giddius"
 classifiers = ["License :: OSI Approved :: MIT License"]
-description-file = "README.md"
+description-file = "readme.md"
 requires = [
-	"appdirs==1.4.4",
-	"argcomplete==1.12.1",
-	"attrs==20.2.0",
-	"checksumdir==1.2.0",
-	"click==7.1.2",
-	"fuzzysearch==0.7.3",
-	"fuzzywuzzy==0.18.0",
-	"gidviewmodels==0.1",
-	"Jinja2==2.11.2",
-	"MarkupSafe==1.1.1",
-	"marshmallow==3.8.0",
-	"numpy==1.19.2",
-	"packaging==20.4",
-	"pipx==0.15.5.1",
-	"pyparsing==2.4.7",
-	"pyperclip==1.8.1",
-	"PyQt5==5.15.1",
-	"PyQt5-sip==12.8.1",
-	"pyqtgraph==0.11.0",
-	"python-dotenv==0.14.0",
-	"python-Levenshtein==0.12.0",
-	"pywin32==228",
-	"QScintilla==2.11.5",
-	"regex==2020.10.23",
-	"six==1.15.0",
-	"userpath==1.4.1",
-	"WMI==1.5.1",
+	"appdirs",
+	"argcomplete",
+	"attrs",
+	"checksumdir",
+	"click",
+	"fuzzysearch",
+	"fuzzywuzzy",
+	"gidviewmodels",
+	"Jinja2",
+	"MarkupSafe",
+	"marshmallow",
+	"numpy",
+	"packaging",
+	"pipx",
+	"pyparsing",
+	"pyperclip",
+	"PyQt5",
+	"PyQt5-sip",
+	"pyqtgraph",
+	"python-dotenv",
+	"python-Levenshtein",
+	"pywin32",
+	"QScintilla",
+	"regex",
+	"six",
+	"userpath",
+	"WMI",
 ]
 
 
 
 
 [tool.flit.scripts]
+

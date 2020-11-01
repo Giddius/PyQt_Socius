@@ -1,0 +1,17 @@
+{
+"designer_files": {
+"content_tab_widget": "pyqtsocius/ui_elements/compound_widgets/converted_files/Ui_content_tab_widget.py",
+"links_tab_widget": "pyqtsocius/ui_elements/compound_widgets/converted_files/Ui_links_tab_widget.py",
+"pyqt_sorter_boiler_creator": "pyqtsocius/ui_elements/dialogs/Ui_pyqt_sorter_boiler_creator.py",
+"pyqt_sorter_mainwindow": "pyqtsocius/converted_files/Ui_pyqt_sorter_mainwindow.py",
+"pyqt_sorter_settings": "pyqtsocius/ui_elements/dialogs/Ui_pyqt_sorter_settings.py",
+"pyqt_sorter_snippet_add": "pyqtsocius/ui_elements/dialogs/Ui_pyqt_sorter_snippet_add.py",
+"pyqt_sorter_widget_info_dialog": "pyqtsocius/ui_elements/dialogs/Ui_pyqt_sorter_widget_info_dialog.py",
+"snippets_tab_widget": "pyqtsocius/ui_elements/compound_widgets/converted_files/Ui_snippets_tab_widget.py"
+},
+"res_name": "pyqt_sorter_ressources_rc",
+"res_rel_path": "pyqtsocius/ui_elements/pyqt_sorter_ressources_rc",
+"ressource_files": {
+"pyqt_sorter_ressources": "pyqtsocius/ui_elements/pyqt_sorter_ressources_rc.py"
+}
+}
