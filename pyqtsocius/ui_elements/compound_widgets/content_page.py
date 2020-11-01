@@ -57,7 +57,7 @@ from pyqtsocius.ui_elements.models.widget_signals_slots_functions_list_model imp
 from pyqtsocius.init_userdata.user_data_setup import Support, request_support_objects
 # endregion[Imports]
 
-__updated__ = '2020-11-01 21:18:02'
+__updated__ = '2020-11-01 21:48:50'
 
 # region [AppUserData]
 
@@ -84,6 +84,7 @@ def create_font_from_config(section, prefix=None):
     font_name = USER_CONFIG.get(section, font_name_key)
     font_size = USER_CONFIG.getint(section, font_size_key)
     bold = USER_CONFIG.getboolean(section, font_bold_key)
+    log.info("created new font, with name '%s', size '%s', bold '%s'", font_name, font_size, bold)
     return create_new_font(font_name, font_size, bold)
 
 
@@ -94,6 +95,7 @@ def create_new_filesystemwatcher(file_to_watch, signal_target, signal_type='file
         _fsw.fileChanged.connect(signal_target)
     elif signal_type == 'folder':
         _fsw.directoryChanged.connect(signal_target)
+    log.info("created filewatcher to watch '%s'", file_to_watch)
     return _fsw
 
 

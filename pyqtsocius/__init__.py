@@ -9,7 +9,7 @@ import os
 import pyqtsocius.ui_elements.pyqt_sorter_ressources_rc
 APPDATA, USER_CONFIG, SOLID_CONFIG = request_support_objects(Support.ALL)
 THIS_FILE_DIR = os.path.abspath(os.path.dirname(__file__))
-_log_file = glog.log_folderer("__main__", in_log_folder_directory=THIS_FILE_DIR)
+_log_file = glog.log_folderer("__main__")
 log = glog.main_logger(_log_file, USER_CONFIG.get('general_settings', 'logging_level'))
 log.info(glog.NEWRUN())
 if USER_CONFIG.getboolean('general_settings', 'use_logging') is False:
