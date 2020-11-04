@@ -33,7 +33,7 @@ class Ui_SnippetsTab(object):
         self.snippets_tableView.setMinimumSize(QtCore.QSize(0, 350))
         self.snippets_tableView.setEditTriggers(QtWidgets.QAbstractItemView.EditKeyPressed)
         self.snippets_tableView.setObjectName("snippets_tableView")
-        self.snippet_preview_Scintilla = Qsci.QsciScintilla(self.splitter)
+        self.snippet_preview_Scintilla = SnippetsPreviewEditor(self.splitter)
         self.snippet_preview_Scintilla.setStyleSheet("")
         self.snippet_preview_Scintilla.setObjectName("snippet_preview_Scintilla")
         self.gridLayout.addWidget(self.splitter, 1, 0, 1, 3)
@@ -45,6 +45,9 @@ class Ui_SnippetsTab(object):
         self.delete_snippet_pushButton = QtWidgets.QPushButton(SnippetsTab)
         self.delete_snippet_pushButton.setObjectName("delete_snippet_pushButton")
         self.gridLayout.addWidget(self.delete_snippet_pushButton, 0, 0, 1, 1)
+        self.copy_snippet_pushButton = QtWidgets.QPushButton(SnippetsTab)
+        self.copy_snippet_pushButton.setObjectName("copy_snippet_pushButton")
+        self.gridLayout.addWidget(self.copy_snippet_pushButton, 2, 2, 1, 1)
 
         self.retranslateUi(SnippetsTab)
 
@@ -54,6 +57,7 @@ class Ui_SnippetsTab(object):
         self.change_font_pushButton.setText(_translate("SnippetsTab", "change Font"))
         self.new_snippet_pushButton.setText(_translate("SnippetsTab", "Add New Snippet"))
         self.delete_snippet_pushButton.setText(_translate("SnippetsTab", "Delete Snippet"))
-from PyQt5 import Qsci
+        self.copy_snippet_pushButton.setText(_translate("SnippetsTab", "Copy Snippet"))
+from pyqtsocius.ui_elements.views.snippets_preview_editor import SnippetsPreviewEditor
 from pyqtsocius.ui_elements.views.snippets_tableview import SnippetsTableView
 import pyqtsocius.ui_elements.pyqt_sorter_ressources_rc

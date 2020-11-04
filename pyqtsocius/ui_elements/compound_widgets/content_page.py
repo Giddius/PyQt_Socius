@@ -57,7 +57,7 @@ from pyqtsocius.ui_elements.models.widget_signals_slots_functions_list_model imp
 from pyqtsocius.init_userdata.user_data_setup import Support, request_support_objects
 # endregion[Imports]
 
-__updated__ = '2020-11-01 21:48:50'
+__updated__ = '2020-11-02 02:43:55'
 
 # region [AppUserData]
 
@@ -129,6 +129,7 @@ class ContentPageWidget(Ui_ContentTab, QWidget):
     def setup(self):
         self.setup_comboboxes()
         self.widget_listView.setModel(self.widget_list_model)
+        self.widget_listView.setFont(create_font_from_config('widget_list_model'))
         self.selected_widget_lineEdit.setReadOnly(True)
         self.functions_slots_listView.setModel(WidgetSignalsSlotsFunctionsListModel(Assignment.FunctionsSlots))
         self.signals_listView.setModel(WidgetSignalsSlotsFunctionsListModel(Assignment.Signals))

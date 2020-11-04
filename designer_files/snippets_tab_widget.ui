@@ -46,7 +46,7 @@
        <set>QAbstractItemView::EditKeyPressed</set>
       </property>
      </widget>
-     <widget class="QsciScintilla" name="snippet_preview_Scintilla">
+     <widget class="SnippetsPreviewEditor" name="snippet_preview_Scintilla">
       <property name="styleSheet">
        <string notr="true"/>
       </property>
@@ -80,6 +80,13 @@
      </property>
     </widget>
    </item>
+   <item row="2" column="2">
+    <widget class="QPushButton" name="copy_snippet_pushButton">
+     <property name="text">
+      <string>Copy Snippet</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <customwidgets>
@@ -89,9 +96,9 @@
    <header>pyqtsocius.ui_elements.views.snippets_tableview</header>
   </customwidget>
   <customwidget>
-   <class>QsciScintilla</class>
+   <class>SnippetsPreviewEditor</class>
    <extends>QPlainTextEdit</extends>
-   <header>PyQt5.Qsci</header>
+   <header>pyqtsocius.ui_elements.views.snippets_preview_editor</header>
   </customwidget>
  </customwidgets>
  <resources>

@@ -268,8 +268,8 @@ echo.
 echo.
 
 echo.
-Echo ################# converting ..\requirements_dev.txt to ..\requirements.txt by calling %OLDHOME_FOLDER%convert_requirements_dev_to_normal.py
-call %OLDHOME_FOLDER%convert_requirements_dev_to_normal.py
+rem Echo ################# converting ..\requirements_dev.txt to ..\requirements.txt by calling %OLDHOME_FOLDER%convert_requirements_dev_to_normal.py
+rem call %OLDHOME_FOLDER%convert_requirements_dev_to_normal.py
 echo.
 Echo INSTALL THE PACKAGE ITSELF AS -dev PACKAGE SO I DONT HAVE TO DEAL WITH RELATIVE PATHS
 cd ..\

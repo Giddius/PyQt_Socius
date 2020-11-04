@@ -52,7 +52,7 @@ from gidqtutils.gidqtstuff import make_icons, create_new_font
 from pyqtsocius.init_userdata.user_data_setup import Support, request_support_objects
 # endregion[Imports]
 
-__updated__ = '2020-10-30 00:47:31'
+__updated__ = '2020-11-02 02:16:01'
 
 # region [AppUserData]
 
@@ -81,7 +81,7 @@ class SnippetsTableView(QTableView):
         self.setShowGrid(True)
         self.setGridStyle(Qt.SolidLine)
         self.setStyleSheet("gridline-color: rgba(25,25,25,150)")
-
+        self.setSelectionMode(QAbstractItemView.SingleSelection)
         self.setFont(create_new_font(USER_CONFIG.get('snippets_list_model', 'default_font'),
                                      USER_CONFIG.getint('snippets_list_model', 'default_font_size'),
                                      in_weight=65))

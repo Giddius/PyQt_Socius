@@ -25,7 +25,7 @@ from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 
 # * Third Party Imports -->
 # import requests
-# import pyperclip
+import pyperclip
 # import matplotlib.pyplot as plt
 # from bs4 import BeautifulSoup
 # from dotenv import load_dotenv
@@ -55,7 +55,7 @@ from pyqtsocius.ui_elements.models.snippet_list_model import SnippetsListModel
 from pyqtsocius.init_userdata.user_data_setup import Support, request_support_objects
 # endregion[Imports]
 
-__updated__ = '2020-10-30 06:49:46'
+__updated__ = '2020-11-02 02:59:49'
 
 # region [AppUserData]
 
@@ -96,34 +96,23 @@ class SnippetsPageWidget(Ui_SnippetsTab, QWidget):
         header.setSectionResizeMode(1, QHeaderView.Stretch)
         header.setSectionResizeMode(0, QHeaderView.ResizeToContents)
 
-        _snippet_font = self.snippet_font()
-        self.snippet_preview_Scintilla.setFont(_snippet_font)
-        self.snippet_preview_Scintilla.setMarginsFont(_snippet_font)
-        self.snippet_preview_Scintilla.zoomIn()
-        self.snippet_preview_Scintilla.setMarginLineNumbers(0, True)
-        self.snippet_preview_Scintilla.setMarginWidth(0, 35)
-        self.snippet_preview_Scintilla.setReadOnly(True)
-        self.snippet_preview_Scintilla.setIndentationsUseTabs(False)
-        self.snippet_preview_Scintilla.setIndentationWidth(4)
-        self.lexer = QsciLexerPython()
-
-        self.lexer.setDefaultFont(_snippet_font)
-        self.snippet_preview_Scintilla.setLexer(self.lexer)
-
-    @staticmethod
-    def snippet_font():
-        _name = USER_CONFIG.get('snippet_preview', 'default_font')
-        _size = USER_CONFIG.getint('snippet_preview', 'default_font_size')
-        _bold = USER_CONFIG.getboolean('snippet_preview', 'default_font_bold')
-        return create_new_font(_name, _size, _bold)
-
     def actions(self):
         self.snippets_tableView.selectionModel().currentChanged.connect(self.show_snippet_preview)
+        self.copy_snippet_pushButton.pressed.connect(self.copy_snippet)
+        self.delete_snippet_pushButton.pressed.connect(self.delete_snippet)
+
+    def delete_snippet(self):
+        _index = self.snippets_tableView.currentIndex()
+        _name = self.snippet_model.content[_index.row()][0]
+        del self.snippet_model[_name]
 
     def show_snippet_preview(self, current_index, previous_index):
         self.snippet_preview_Scintilla.setText(self.snippet_model.get_full_snippet(current_index))
 
-
+    def copy_snippet(self):
+        _text = self.snippet_preview_Scintilla.text()
+        _out_text_list = [line for line in _text.splitlines() if not line.startswith('#')]
+        pyperclip.copy('\n'.join(_out_text_list))
 # region[Main_Exec]
 
 

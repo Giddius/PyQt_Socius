@@ -86,6 +86,8 @@ class Ui_ContentTab(object):
         self.widget_listView.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
         self.widget_listView.setStyleSheet("")
         self.widget_listView.setAutoScroll(False)
+        self.widget_listView.setAlternatingRowColors(True)
+        self.widget_listView.setTextElideMode(QtCore.Qt.ElideMiddle)
         self.widget_listView.setVerticalScrollMode(QtWidgets.QAbstractItemView.ScrollPerPixel)
         self.widget_listView.setHorizontalScrollMode(QtWidgets.QAbstractItemView.ScrollPerPixel)
         self.widget_listView.setSelectionRectVisible(True)

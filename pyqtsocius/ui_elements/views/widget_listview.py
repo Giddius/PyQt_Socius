@@ -50,7 +50,7 @@ from gidtools.gidfiles import (QuickFile, readit, clearit, readbin, writeit, loa
 from pyqtsocius.init_userdata.user_data_setup import Support, request_support_objects
 # endregion[Imports]
 
-__updated__ = '2020-11-01 21:12:49'
+__updated__ = '2020-11-02 02:49:13'
 
 # region [AppUserData]
 
@@ -75,7 +75,7 @@ class WidgetListView(QListView):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.setEnabled(True)
-        self.setSpacing(6)
+        self.setSpacing(2)
         self.setIconSize(QSize(50, 50))
         self.setUniformItemSizes(True)
         self.setSelectionRectVisible(True)

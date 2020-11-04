@@ -23,6 +23,7 @@ from collections import Counter, ChainMap, deque, namedtuple, defaultdict
 from multiprocessing import Pool
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 
+
 # * Third Party Imports -->
 # import requests
 # import pyperclip
@@ -52,7 +53,7 @@ from gidtools.gidfiles import (QuickFile, readit, clearit, readbin, writeit, loa
 from pyqtsocius.main_window import GidPyQtSociusMainWindow, SystemTray
 # endregion[Imports]
 
-__updated__ = '2020-11-01 20:59:40'
+__updated__ = '2020-11-02 02:16:32'
 
 # region [AppUserData]
 

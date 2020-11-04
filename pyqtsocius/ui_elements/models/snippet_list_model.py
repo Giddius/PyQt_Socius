@@ -55,7 +55,7 @@ from pyqtsocius.init_userdata.user_data_setup import Support, request_support_ob
 
 # endregion[Imports]
 
-__updated__ = '2020-10-31 06:52:01'
+__updated__ = '2020-11-02 02:59:16'
 
 # region [AppUserData]
 
@@ -97,7 +97,10 @@ class SnippetsListModel(QAbstractTableModel):
         if not index.isValid():
             return None
         elif role in [Qt.DisplayRole]:
-            return self.content[index.row()][index.column()]
+            if index.column() == 0:
+                return self.content[index.row()][index.column()].title()
+            else:
+                return self.content[index.row()][index.column()]
         elif role == Qt.ToolTipRole:
             return self.content[index.row()][1]
         elif role == Qt.BackgroundRole and USER_CONFIG.getboolean(str(self), 'use_background_color') is True:
@@ -110,7 +113,7 @@ class SnippetsListModel(QAbstractTableModel):
         _out = []
         if len(self.raw_content) != 0:
             for key, value in self.raw_content.items():
-                _out.append((key.title(), value.get('description', 'missing'), value.get('icon', 'placeholder_icon'), value.get('color', ''), value.get('data', 'no Data')))
+                _out.append((key, value.get('description', 'missing'), value.get('icon', 'placeholder_icon'), value.get('color', ''), value.get('data', 'no Data')))
         self.content = _out
 
     def get_raw_content(self):
